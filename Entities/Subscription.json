@@ -1,0 +1,39 @@
+{
+  "name": "Subscription",
+  "type": "object",
+  "properties": {
+    "account_id": {
+      "type": "string",
+      "description": "The ID of the account this subscription belongs to"
+    },
+    "tier": {
+      "type": "string",
+      "enum": [
+        "free",
+        "personal_basic",
+        "personal_standard",
+        "personal_premium",
+        "personal_enterprise",
+        "business_free",
+        "business_basic",
+        "business_standard",
+        "business_premium",
+        "business_enterprise",
+        "business_payroll"
+      ],
+      "default": "free",
+      "description": "Subscription tier"
+    },
+    "duration": {
+      "type": "string",
+      "enum": [
+        "1_day",
+        "2_weeks",
+        "1_month",
+        "3_months",
+        "6_months",
+        "9_months",
+        "12_months"
+      ],
+      "description": "Subscription duration"
+    }

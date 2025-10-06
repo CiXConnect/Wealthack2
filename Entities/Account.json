@@ -1,0 +1,39 @@
+{
+  "name": "Account",
+  "type": "object",
+  "properties": {
+    "owner_email": {
+      "type": "string",
+      "description": "Email of the user who owns this account"
+    },
+    "account_name": {
+      "type": "string",
+      "description": "User-friendly name for the account (e.g., 'Personal Finance', 'My Company')"
+    },
+    "account_type": {
+      "type": "string",
+      "enum": [
+        "personal",
+        "business"
+      ],
+      "description": "The type of the account"
+    },
+    "id_number": {
+      "type": "string",
+      "description": "South African ID number (for personal)"
+    },
+    "tax_number": {
+      "type": "string",
+      "description": "SARS Tax Number"
+    },
+    "company_name": {
+      "type": "string",
+      "description": "Registered company name (for business)"
+    },
+    "company_email": {
+      "type": "string",
+      "description": "Official business email address (must not be a free provider like Gmail)"
+    },
+    "company_email_verified": {
+      "type": "boolean",
+     

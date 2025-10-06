@@ -1,0 +1,52 @@
+{
+  "name": "Campaign",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the marketing campaign."
+    },
+    "platform": {
+      "type": "string",
+      "enum": [
+        "Facebook",
+        "WhatsApp",
+        "Google",
+        "Email",
+        "Other"
+      ],
+      "description": "The platform where the campaign is running."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Planning",
+        "Active",
+        "Completed",
+        "Paused"
+      ],
+      "default": "Planning"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "link": {
+      "type": "string",
+      "description": "URL link to the campaign or ad creative."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Any relevant notes or performance metrics."
+    }
+  },
+  "required": [
+    "name",
+    "platform",
+    "status"
+  ]
+}

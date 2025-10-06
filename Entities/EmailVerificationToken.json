@@ -1,0 +1,24 @@
+{
+  "name": "EmailVerificationToken",
+  "type": "object",
+  "properties": {
+    "account_id": {
+      "type": "string",
+      "description": "The ID of the account this token is for."
+    },
+    "token": {
+      "type": "string",
+      "description": "The unique verification token."
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the token expires."
+    }
+  },
+  "required": [
+    "account_id",
+    "token",
+    "expires_at"
+  ]
+}

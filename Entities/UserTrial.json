@@ -1,0 +1,39 @@
+{
+  "name": "UserTrial",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email of user on trial"
+    },
+    "trial_start_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "trial_end_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ip_address": {
+      "type": "string",
+      "description": "IP address at signup"
+    },
+    "country_code": {
+      "type": "string",
+      "description": "Country code detected from IP"
+    },
+    "is_vpn_detected": {
+      "type": "boolean",
+      "default": false
+    },
+    "trial_status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "expired",
+        "converted",
+        "cancelled"
+      ],
+      "default": "active"
+    },
+    "

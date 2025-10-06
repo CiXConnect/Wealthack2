@@ -1,0 +1,39 @@
+{
+  "name": "FinancialReport",
+  "type": "object",
+  "properties": {
+    "account_id": {
+      "type": "string",
+      "description": "The ID of the account this report belongs to"
+    },
+    "report_type": {
+      "type": "string",
+      "enum": [
+        "cashflow",
+        "balance_sheet",
+        "income_statement",
+        "trial_balance",
+        "sars_personal_tax",
+        "sars_it14",
+        "sars_vat201",
+        "sars_emp201",
+        "annual_financial_statements"
+      ],
+      "description": "Type of financial report"
+    },
+    "report_period": {
+      "type": "string",
+      "description": "Period covered by report"
+    },
+    "report_data": {
+      "type": "object",
+      "description": "Structured financial data from AI"
+    },
+    "sars_compliance": {
+      "type": "object",
+      "description": "Structured data for SARS-compliant reports",
+      "properties": {
+        "taxpayer_details": {
+          "type": "object"
+        },
+     

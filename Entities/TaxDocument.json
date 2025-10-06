@@ -1,0 +1,54 @@
+{
+  "name": "TaxDocument",
+  "type": "object",
+  "properties": {
+    "account_id": {
+      "type": "string",
+      "description": "The account this document belongs to."
+    },
+    "tax_year": {
+      "type": "number",
+      "description": "The tax year this document applies to (e.g., 2024)."
+    },
+    "document_type": {
+      "type": "string",
+      "enum": [
+        "irp5",
+        "medical_aid_certificate",
+        "ra_contribution_certificate",
+        "investment_statement",
+        "logbook",
+        "other"
+      ],
+      "description": "The type of tax document."
+    },
+    "file_url": {
+      "type": "string",
+      "description": "URL of the uploaded file."
+    },
+    "file_name": {
+      "type": "string",
+      "description": "Name of the uploaded file."
+    },
+    "extracted_data": {
+      "type": "object",
+      "description": "Structured data extracted from the document by AI."
+    },
+    "processing_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "processing",
+        "completed",
+        "failed"
+      ],
+      "default": "pending"
+    }
+  },
+  "required": [
+    "account_id",
+    "tax_year",
+    "document_type",
+    "file_url"
+  ]
+}

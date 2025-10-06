@@ -1,0 +1,39 @@
+{
+  "name": "BankStatement",
+  "type": "object",
+  "properties": {
+    "account_id": {
+      "type": "string",
+      "description": "The ID of the account this statement belongs to"
+    },
+    "file_url": {
+      "type": "string",
+      "description": "Uploaded bank statement file URL"
+    },
+    "file_name": {
+      "type": "string",
+      "description": "Original file name"
+    },
+    "bank_name": {
+      "type": "string",
+      "enum": [
+        "Standard Bank",
+        "FNB",
+        "ABSA",
+        "Nedbank",
+        "Capitec",
+        "Discovery Bank",
+        "TymeBank",
+        "African Bank",
+        "Other"
+      ],
+      "description": "South African bank"
+    },
+    "statement_period": {
+      "type": "string",
+      "description": "Statement period (e.g., January 2024)"
+    },
+    "is_password_protected": {
+      "type": "boolean",
+      "default": false
+    }

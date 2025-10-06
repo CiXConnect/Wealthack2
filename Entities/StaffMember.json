@@ -1,0 +1,39 @@
+{
+  "name": "StaffMember",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email of the user account"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "support",
+        "admin",
+        "accountant",
+        "manager"
+      ],
+      "default": "support"
+    },
+    "permissions": {
+      "type": "object",
+      "properties": {
+        "can_manage_users": {
+          "type": "boolean",
+          "default": false
+        },
+        "can_manage_subscriptions": {
+          "type": "boolean",
+          "default": false
+        },
+        "can_view_reports": {
+          "type": "boolean",
+          "default": true
+        },
+        "can_access_support_chat": {
+          "type": "boolean",
+          "default": true
+        },
+        "can_modify_settings": {
+     

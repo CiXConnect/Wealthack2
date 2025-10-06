@@ -1,0 +1,24 @@
+{
+  "name": "SharedReport",
+  "type": "object",
+  "properties": {
+    "html_content": {
+      "type": "string",
+      "description": "The full HTML content of the report to be displayed."
+    },
+    "report_title": {
+      "type": "string",
+      "description": "The title of the report, used for the page title."
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The timestamp when this shared link should expire."
+    }
+  },
+  "required": [
+    "html_content",
+    "report_title",
+    "expires_at"
+  ]
+}

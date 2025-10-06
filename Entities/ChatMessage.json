@@ -1,0 +1,39 @@
+{
+  "name": "ChatMessage",
+  "type": "object",
+  "properties": {
+    "conversation_id": {
+      "type": "string",
+      "description": "Unique ID for the conversation thread"
+    },
+    "sender_email": {
+      "type": "string",
+      "description": "Email of message sender"
+    },
+    "sender_type": {
+      "type": "string",
+      "enum": [
+        "client",
+        "staff",
+        "bot"
+      ],
+      "description": "Type of sender"
+    },
+    "message_content": {
+      "type": "string",
+      "description": "The actual message text"
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "URLs of attached files"
+    },
+    "is_read": {
+      "type": "boolean",
+      "default": false
+    },
+    "status": {
+      "type": "string",
+     

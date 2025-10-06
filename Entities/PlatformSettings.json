@@ -1,0 +1,39 @@
+{
+  "name": "PlatformSettings",
+  "type": "object",
+  "properties": {
+    "tier_prices": {
+      "type": "object",
+      "properties": {
+        "personal_basic": {
+          "type": "number",
+          "default": 190
+        },
+        "personal_standard": {
+          "type": "number",
+          "default": 390
+        },
+        "personal_premium": {
+          "type": "number",
+          "default": 690
+        },
+        "personal_enterprise": {
+          "type": "number",
+          "default": 1290
+        },
+        "business_basic": {
+          "type": "number",
+          "default": 220
+        },
+        "business_standard": {
+          "type": "number",
+          "default": 450
+        },
+        "business_premium": {
+          "type": "number",
+          "default": 795
+        },
+        "business_enterprise": {
+          "type": "number",
+          "default": 1890
+     

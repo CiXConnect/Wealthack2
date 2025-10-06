@@ -1,0 +1,30 @@
+{
+  "name": "KnowledgeBaseItem",
+  "type": "object",
+  "properties": {
+    "question": {
+      "type": "string",
+      "description": "A common question a user might ask."
+    },
+    "answer": {
+      "type": "string",
+      "description": "The official answer to the question."
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "General",
+        "Pricing",
+        "Features",
+        "Security",
+        "Onboarding"
+      ],
+      "default": "General",
+      "description": "A category to help organize the knowledge base."
+    }
+  },
+  "required": [
+    "question",
+    "answer"
+  ]
+}
