@@ -1,6 +1,8 @@
 import { DashboardNav } from "@/components/dashboard/dashboard-nav"
 import { ChatInterface } from "@/components/chat/chat-interface"
 
+export const dynamic = "force-dynamic"
+
 export default function ChatPage() {
   return (
     <div className="flex min-h-screen">

@@ -3,6 +3,8 @@ import { UploadZone } from "@/components/dashboard/upload-zone"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { AlertCircle } from "lucide-react"
 
+export const dynamic = "force-dynamic"
+
 export default function UploadPage() {
   return (
     <div className="flex min-h-screen">
